@@ -1,0 +1,23 @@
+---
+import NavBar from "../components/NavBar";
+import HeroSection from "../components/HeroSection";
+import '../styles/global.css';
+import SecondSection from "../components/SecondSection";
+---
+
+<html lang="es">
+  <head>
+    <title>Solventium - Inicio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-white">
+    <NavBar pathname="/" client:load />
+    <main class="pt-20">
+      <HeroSection client:load />
+    </main>
+	<section class="bg-[#007CD4] h-screen flex flex-col w-full">
+		<SecondSection client:load />
+	</section>
+  </body>
+</html>

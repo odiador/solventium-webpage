@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script:wght@400;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --background: 255 255 255;
+  --foreground: 50 77 91;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --background: #1d2228;
+    --foreground: #b5bfca;
+  } */
+}
+
+@theme {
+    --font-nanum: "Nanum Pen Script", cursive;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+}
