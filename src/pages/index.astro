@@ -1,8 +1,13 @@
 ---
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
-import '../styles/global.css';
 import SecondSection from "../components/SecondSection";
+import StatsSection from "../components/StatsSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ContactSection from "../components/ContactSection";
+import CTASection from "../components/CTASection";
+import Footer from "../components/Footer";
+import '../styles/global.css';
 ---
 
 <html lang="es">
@@ -11,13 +16,18 @@ import SecondSection from "../components/SecondSection";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="bg-white">
+  <body class="bg-white flex flex-col">
     <NavBar pathname="/" client:load />
     <main class="pt-20">
       <HeroSection client:load />
     </main>
-	<section class="bg-[#007CD4] h-screen flex flex-col w-full">
-		<SecondSection client:load />
-	</section>
+    <section class="bg-[#007CD4]">
+      <SecondSection client:load />
+    </section>
+    <StatsSection client:load />
+    <TestimonialsSection client:load />
+    <CTASection client:load />
+    <ContactSection client:load />
+    <Footer client:load />
   </body>
 </html>

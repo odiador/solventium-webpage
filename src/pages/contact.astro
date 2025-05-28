@@ -1,5 +1,8 @@
 ---
 import NavBar from "../components/NavBar";
+import ContactSection from "../components/ContactSection";
+import ContactBenefitsSection from "../components/ContactBenefitsSection";
+import Footer from "../components/Footer";
 import '../styles/global.css';
 ---
 
@@ -12,8 +15,22 @@ import '../styles/global.css';
   <body class="bg-white">
     <NavBar pathname="/contact" client:load />
     <main class="pt-20">
-      <h1 class="text-4xl font-bold text-center mt-10">Contáctanos</h1>
-      <p class="text-center mt-4">Formulario de contacto próximamente.</p>
+      {/* Hero Section */}
+      <section class="py-20 px-6 bg-gradient-to-br from-[#F2931F] to-[#007CD4]">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl lg:text-6xl font-nanum italic text-white mb-6">
+            Contáctanos
+          </h1>
+          <p class="text-xl text-white/90 leading-relaxed">
+            Estamos aquí para ayudarte. Ponte en contacto con nosotros y descubre 
+            cómo podemos solucionar tus necesidades legales y tecnológicas.
+          </p>
+        </div>      </section>
+
+      {/* Información adicional */}
+      <ContactBenefitsSection client:load />
     </main>
+    <ContactSection client:load />
+    <Footer client:load />
   </body>
 </html>

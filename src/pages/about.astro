@@ -1,5 +1,8 @@
 ---
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import ValuesSection from "../components/ValuesSection";
+import { FaBullseye, FaStar, FaUsers } from "react-icons/fa";
 import '../styles/global.css';
 ---
 
@@ -12,8 +15,79 @@ import '../styles/global.css';
   <body class="bg-white">
     <NavBar pathname="/about" client:load />
     <main class="pt-20">
-      <h1 class="text-4xl font-bold text-center mt-10">Nosotros</h1>
-      <p class="text-center mt-4">Página de información sobre la empresa Solventium.</p>
+      {/* Hero Section */}
+      <section class="py-20 px-6 bg-gradient-to-br from-[#007CD4] to-[#324d5b]">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl lg:text-6xl font-nanum italic text-white mb-6">
+            Nosotros
+          </h1>
+          <p class="text-xl text-white/90 leading-relaxed">
+            Somos una empresa comprometida con brindar soluciones tecnológicas y jurídicas 
+            integrales que impulsen el crecimiento y la tranquilidad de nuestros clientes.
+          </p>
+        </div>
+      </section>
+
+      {/* Misión y Visión */}
+      <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="bg-gradient-to-br from-[#007CD4]/10 to-[#F2931F]/10 rounded-2xl p-8 border border-gray-200">
+              <div class="w-12 h-12 bg-[#007CD4] rounded-full flex items-center justify-center mb-6">
+                <FaBullseye className="text-2xl text-white" />
+              </div>
+              <h2 class="text-3xl font-nanum italic text-[#324d5b] mb-6">Nuestra Misión</h2>
+              <p class="text-gray-700 leading-relaxed text-lg">
+                Proporcionar soluciones tecnológicas y jurídicas innovadoras que simplifiquen 
+                los procesos legales y empresariales, garantizando eficiencia, transparencia 
+                y resultados excepcionales para nuestros clientes.
+              </p>
+            </div>            
+            <div class="bg-gradient-to-br from-[#F2931F]/10 to-[#007CD4]/10 rounded-2xl p-8 border border-gray-200">
+              <div class="w-12 h-12 bg-[#F2931F] rounded-full flex items-center justify-center mb-6">
+                <FaStar className="text-2xl text-white" />
+              </div>
+              <h2 class="text-3xl font-nanum italic text-[#324d5b] mb-6">Nuestra Visión</h2>
+              <p class="text-gray-700 leading-relaxed text-lg">
+                Ser reconocidos como la empresa líder en Colombia en la prestación de 
+                servicios legales y tecnológicos integrados, transformando la manera 
+                en que las empresas gestionan sus procesos judiciales y financieros.
+              </p>
+            </div>
+          </div>
+        </div>      </section>
+
+      {/* Valores */}
+      <ValuesSection client:load />
+
+      {/* Equipo */}
+      <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-nanum italic text-[#324d5b] mb-6">
+              Nuestro Equipo
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Profesionales especializados comprometidos con la excelencia y la innovación.
+            </p>
+          </div>          
+          <div class="bg-gradient-to-br from-[#007CD4]/5 to-[#F2931F]/5 rounded-2xl p-12 text-center border border-gray-200">
+            <div class="w-16 h-16 bg-[#324d5b] rounded-full flex items-center justify-center mx-auto mb-6">
+              <FaUsers className="text-3xl text-white" />
+            </div>
+            <h3 class="text-2xl font-bold text-[#324d5b] mb-4">
+              Un Equipo Multidisciplinario
+            </h3>
+            <p class="text-gray-700 leading-relaxed text-lg max-w-4xl mx-auto">
+              Contamos con abogados especializados, desarrolladores de software, 
+              consultores empresariales y expertos en tecnología que trabajan en conjunto 
+              para ofrecer soluciones integrales y personalizadas. Nuestro enfoque 
+              colaborativo nos permite abordar cada caso desde múltiples perspectivas, 
+              garantizando resultados óptimos para nuestros clientes.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+    <Footer client:load />
   </body>
 </html>
